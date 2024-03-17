@@ -1,46 +1,56 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#define ll long long int
+#define ld long double
+#define endl '\n'
+#define faster                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
 using namespace std;
-#define ll long long
+
 int main()
 {
-    ll t, n, i, j, ans;
-    string a, b;
-    
-    cin>>t;
-    
-    for(;t--;)
+    faster;
+    ll t;
+    // t=1;
+    cin >> t;
+
+    while (t--)
     {
-        cin>>n>>b;
-        ans=0;
-        cin>>a;
-        
-        ll suff[n];
-        
-        if(a[n-1]=='g'){
-            suff[n-1]=n-1;
-        }else{
-            suff[n-1]=-1;
+        ll n;
+        cin >> n;
+        ll a[n];
+        char s1;
+        string s;
+        cin >> s1 >> s;
+        if(s1=='g'){
+            cout<<0<<endl;
         }
-        
-        for(i=n-2; i>=0; i--){
-            if(a[i]=='g'){
-                suff[i]=i;
-            }else{
-                suff[i]=suff[i+1];
-            }
+        else{
+            if(s[n-1]=='g'){
+            a[n-1]=n-1;
         }
-        
-        for(i=0; i<n; i++)
+        else{
+            a[n-1]=0;
+        }
+        for(ll i=n-2;i>=0;i--){
+            if(s[i]=='g') a[i]=i;
+            else a[i]=a[i+1];
+        }
+        ll ans=0;
+        for(ll i=0;i<n;i++)
         {
-            if(a[i]==b[0]){
-                if(suff[i]==-1){
-                    ans=max(ans, n-1-i+1+suff[0]);
-                }else{
-                    ans=max(ans, suff[i]-i);
-                }
+            if(s[i]==s1){
+                if(a[i]==0){
+                    ans=max(ans,n-i+a[0]);
+            }
+            else{
+                ans=max(ans,a[i]-i);
+            }
             }
         }
-        
-        cout<<ans<<"\n";
+        cout<<ans<<endl;
+        }
     }
+    return 0;
 }

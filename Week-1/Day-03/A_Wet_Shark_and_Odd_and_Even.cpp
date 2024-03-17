@@ -16,7 +16,6 @@ t=1;
 while(t--){
 ll n,sum=0;cin>>n;
 ll a[n];
-ll p[n];
 for(ll i=0;i<n;i++){
     cin>>a[i];
     sum+=a[i];
