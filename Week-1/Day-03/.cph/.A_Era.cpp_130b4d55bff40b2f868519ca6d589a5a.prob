@@ -1,0 +1,1 @@
+{"name":"Local: A_Era","url":"d:\\XPSC\\Week-1\\Day-03\\A_Era.cpp","tests":[{"id":1710603356527,"input":"4\n3\n1 3 4\n5\n1 2 5 7 4\n1\n1\n3\n69 6969 696969","output":"1\n3\n0\n696966"},{"id":1710603850634,"input":"1\n3\n1 3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\XPSC\\Week-1\\Day-03\\A_Era.cpp","group":"local","local":true}
