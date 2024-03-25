@@ -27,7 +27,7 @@ for(ll i=0;i<n;i++)
 {
 if((a[0][i]=='G' && a[1][i]=='B') || (a[0][i]=='B' && a[1][i]=='G')){
     continue;
-}
+} 
 else if(a[0][i]==a[1][i]){
     continue;
 }
