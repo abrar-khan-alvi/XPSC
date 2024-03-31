@@ -8,8 +8,8 @@ using namespace std;
 class Solution{
   public:
     int longestKSubstr(string s, int k) {
-    int i=0,j=0,m=-1;
-    unordered_map<char,int>mp;
+    long long i=0,j=0,m=-1;
+    unordered_map<char,long long>mp;
     int n=s.length();
     
     while(j<n){
