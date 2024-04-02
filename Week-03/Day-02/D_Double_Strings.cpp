@@ -25,7 +25,8 @@ for(ll i=0;i<n;i++){
 for(ll i=0;i<n;i++){
     ll f=0;
     for(ll j=0;j<v[i].length();j++){
-        string a = v[i].substr(0, j), b = v[i].substr(j, v[i].length() - j);
+        string a = v[i].substr(0, j);
+        string b = v[i].substr(j, v[i].length() - j);
 			if (mp[a] && mp[b]){
                 f=1;
             }

@@ -11,12 +11,13 @@ using namespace std;
 int main()
 {
     faster;
-    ll t, n, i, j, m;
+    ll t;
 
     cin >> t;
 
-    for (; t--;)
+    while (t--)
     {
+        ll n, i, j, m;
         cin >> n;
         ll ans[n + 1];
 
@@ -24,7 +25,7 @@ int main()
 
         m = n;
 
-        while (m > 0)
+        while (m--)
         {
             for (i = 1; i <= n - 1; i++)
             {
@@ -32,7 +33,7 @@ int main()
                 pos[j].push_back(i);
             }
 
-            m--;
+            
         }
 
         for (i = 1; i <= n; i++)

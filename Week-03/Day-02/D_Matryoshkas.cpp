@@ -20,7 +20,7 @@ while(t--){
     map<ll, ll> mp;
     for (ll i = 0; i < n; i++) {
       cin >> a[i];
-      mp[a[i]] ++;
+      mp[a[i]]++;
     }
     ll ans = n;
     ll last = -1;
