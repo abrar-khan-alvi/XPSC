@@ -16,12 +16,12 @@ cin>>t;
 while(t--){
         int n;
         cin >> n;
-        vector<int> a(n);
+        ll a[n];
         for(ll i=0;i<n;i++)
             cin >> a[i];
-        map<int, int> c;
+        map<ll, ll> c;
         ll k=0;
-        for (int i = n - 1; i >= 0; i--) {
+        for (ll i = n - 1; i >= 0; i--) {
             if (c.count(a[i])) {
                 //cout<<c.count(a[i])<< " ";
                 k=i+1;
@@ -29,7 +29,7 @@ while(t--){
                 //yes = true;
                 break;
             }
-            c[a[i]] = 1;
+            c[a[i]]++;
         }
         cout<<k<<endl;
 }
