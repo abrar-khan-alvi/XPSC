@@ -29,7 +29,7 @@ int main() {
 
         sort(vec.begin(), vec.end(), cmp);
         string s;
-        for (const auto &it : vec) {
+        for (auto it : vec) {
             
             cout<<it.first.substr(it.first.size() - 2);
         }
