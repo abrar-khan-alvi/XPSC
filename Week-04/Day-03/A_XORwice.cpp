@@ -12,19 +12,10 @@ faster;
 ll t;
 //t=1;
 cin>>t;
-
+//(a^(a& b)) + (b^(a& b))
 while(t--){
-ll n,k;
-cin>>n>>k;
-int rst= -1;
-for(ll i=0;i<n;i++){
-    ll x;cin>>x;
-    if((x&k)==k){
-        rst&=x;
-    }
-}
-if(rst==k) cout<<"YES"<<endl;
-else cout<<"NO"<<endl;
+ll a,b;cin>>a>>b;
+cout<<(a^(a& b)) + (b^(a& b))<<endl;
 
 
 }

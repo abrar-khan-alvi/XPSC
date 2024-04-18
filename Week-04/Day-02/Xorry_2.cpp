@@ -25,17 +25,17 @@ ll n;
             cnt++;
         }
         ll ans =1;
-        bool flag = false;
-        for (int i = cnt - 1; i >= 0; i--)
+        ll f = 0;
+        for (ll i = cnt - 1; i >= 0; i--)
         {
             if (n & 1 << i)
             {
                 b = b | (1<< i);
-                flag = true;
+                f = 1;
             }
             else
             {
-                if(flag==true)
+                if(f==1)
                 {
                     ans*=2;
                 }
