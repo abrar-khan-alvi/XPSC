@@ -16,14 +16,14 @@ int main() {
 
     ll c = 0;
 
-    for (ll seq = 1; seq < (1LL) << n; seq++) {
+    for (ll i = 1; i < (1LL) << n; i++) {
         vector<ll> cur;
 
-        for (ll bit = 0; bit < n; bit++) {
-            ll msk = (1LL) << bit;
+        for (ll j = 0; j < n; j++) {
+            ll msk = (1LL) << j;
 
-            if (msk & seq) {
-                cur.push_back(v[bit]);
+            if (msk & i) {
+                cur.push_back(v[j]);
             }
         }
 

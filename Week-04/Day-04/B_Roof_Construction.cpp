@@ -20,7 +20,8 @@ else {
     ll cur=n-1;
     while(cur>1){
         cout<<cur<<" ";
-        if((ll)log2(cur-1)!=(ll)log2(cur)) break;
+        if((ll)log2(cur-1)!=(ll)log2(cur))
+            break;
 
         cur--;
     }

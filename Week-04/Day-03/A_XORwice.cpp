@@ -15,7 +15,7 @@ cin>>t;
 //(a^(a& b)) + (b^(a& b))
 while(t--){
 ll a,b;cin>>a>>b;
-cout<<(a^(a& b)) + (b^(a& b))<<endl;
+cout<<(a^(a & b)) + (b^(a & b))<<endl;
 
 
 }

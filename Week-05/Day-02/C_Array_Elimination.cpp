@@ -5,9 +5,8 @@
 #define faster ios_base:: sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 using namespace std;
 
-string decToBinary(int n)
+string binary(int n)
 {
-    // Size of an integer is assumed to be 32 bits
     string ans;
     for (int i = 64; i >= 0; i--)
     {
@@ -38,7 +37,7 @@ while(t--){
     ll g = 0;
     for (ll i = 0; i < n; i++)
     {
-        string s = decToBinary(v[i]);
+        string s = binary(v[i]);
         for (ll j = 0; j < 64; j++)
         {
             if (s[j] != '0')

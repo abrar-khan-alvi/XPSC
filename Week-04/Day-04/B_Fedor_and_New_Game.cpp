@@ -20,7 +20,7 @@ int main() {
     int count = 0;
     for(int i : arr) {
         int temp = player ^ i;
-        // Explain
+        
         bitset<32> bin_val(temp);
         int temp_count = 0;
         for(int j = 0; j < 32; j++) {
