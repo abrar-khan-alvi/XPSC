@@ -30,7 +30,7 @@ while(t--){
     ll n;
     cin >> n;
     vector<ll> v(n);
-    set<ll> s;
+    
     for (ll i = 0; i < n; i++)
         cin >> v[i];
     vector<ll> m(64);
