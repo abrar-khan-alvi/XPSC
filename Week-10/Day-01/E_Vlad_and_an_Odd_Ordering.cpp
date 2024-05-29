@@ -16,7 +16,7 @@ cin>>t;
 while(t--){
 ll n,k;
 cin>>n>>k;
-for(int i=1;i<=(log2(n)+1);i++){
+for(ll i=1;i<=(log2(n)+1);i++){
     ll x=pow(2,i);
     ll y=(n+(x/2))/x;
     if(k<=y){
