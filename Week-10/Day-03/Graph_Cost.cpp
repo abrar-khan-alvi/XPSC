@@ -23,7 +23,7 @@ while(t--){
 
     vector<pair<ll,ll>>v(n);
 
-    for(int i=n-1;i>=0;i--)
+    for(ll i=n-1;i>=0;i--)
     {
         if(a[i]<=mn)
         {
@@ -46,7 +46,7 @@ while(t--){
         for(ll i=1;i<n;i++)
         {
             sum += max(a[i],a[i-1]);
-            
+
             if(a[i]<mn || a[i]==v[i].first)
             {
                 cost += min(sum,(i-ind)*max(mn,a[i]));
@@ -55,7 +55,7 @@ while(t--){
                 sum = 0;
             }
         }
-    
+
         cout<<min(cost,max(a[0],a[n-1])*(n-1))<<endl;
     }
     

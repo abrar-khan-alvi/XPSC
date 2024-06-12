@@ -15,7 +15,7 @@ int main() {
         string s;
         cin >> n >> s;
 
-        map<char, int> freq;
+        map<char, ll> freq;
         for (char ch : s) {
             freq[ch]++;
         }
@@ -31,12 +31,12 @@ int main() {
         if (!isValid) {
             cout << "NO" << endl;
         } else {
-            map<char, int> half_freq;
+            map<char, ll> half_freq;
             ll cnt1 = 0, cnt2 = 0;
 
             for (auto it:freq) {
                 char ch = it.first;
-                int freq_count = it.second;
+                ll freq_count = it.second;
 
                 if (ch == 'N' || ch == 'S') {
                     half_freq[ch] = freq_count / 2 + (freq_count % 2);

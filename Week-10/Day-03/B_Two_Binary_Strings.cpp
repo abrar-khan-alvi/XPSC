@@ -1,29 +1,35 @@
-#include<bits/stdc++.h>
-#define ll long long int
-#define ld long double
-#define endl '\n'
-#define faster ios_base:: sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#include <iostream>         // For standard I/O operations
+#include <thread>           // For std::thread
+#include <vector>           // For std::vector
+#include <semaphore>        // For binary_semaphore
+#include <unistd.h>         // For sleep function
 using namespace std;
 
+#define CHAIRS 5            // number of waiting chairs in the barber shop
 
-int main()
-{
-faster;
-ll t;
-//t=1;
-cin>>t;
-
-while(t--){
-string a,b;cin>>a>>b;
-ll f=0;
-for(ll i=0;i<a.size()-1;i++)
-{
-    if(a[i]==b[i] && a[i]=='0' && a[i+1]==b[i+1] && a[i+1]=='1')
-        f=1;
+binary_semaphore customers(0);   // semaphore to count waiting customers, initialized to 0
+binary_semaphore barber(1);     // semaphore to count available barbers, initialized to 1
+binary_semaphore mutex(1);       // semaphore for mutual exclusion, initialized to 1
+int waiting = 0;                      // number of waiting customers
+void barber() {
+    while (true) {
+        customers.acquire(); 
+        mutex.acquire();
+        waiting--;
+        barbers.release();
+        mutex.release();
+        sleep(1);
+    }
 }
-if(f) puts("YES");
-else puts("NO");
-
-}
-return 0;
+void customer(int id) {
+    mutex.acquire();
+    if (waiting < CHAIRS) { 
+        waiting++;
+        customers.release();
+        mutex.release();
+        barbers.acquire();
+        // Get haircut (simulated by the barber)
+    } else {
+        mutex.release(); 
+    }
 }
